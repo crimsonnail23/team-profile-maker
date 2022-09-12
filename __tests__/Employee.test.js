@@ -1,4 +1,4 @@
-const Employee = require('../src/Employee.js');
+const Employee = require('../lib/Employee.js');
 
 test('creates an employee class',()=>{
     const employee = new Employee('Jennifer', 1, 'jenny@email.com', 'Employee')
