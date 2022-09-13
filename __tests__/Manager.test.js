@@ -17,13 +17,13 @@ test('checks to see if getName method works',()=>{
 test('checks to see if getId method works',()=>{
     const manager = new Manager('Joel',2,'joel@email.com');
     
-    expect(manager.getId).toEqual(2);
+    expect(manager.getId()).toEqual(2);
 });
 
 test('checks to see if getEmail method works', ()=>{
     const manager = new Manager('Joel',2,'joel@email.com');
 
-    expect(manager.getEmail).toBe('joel@email.com');
+    expect(manager.getEmail()).toBe('joel@email.com');
 })
 
 test('checks to see if officeNumber method works',()=>{
