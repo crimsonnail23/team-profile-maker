@@ -1,6 +1,6 @@
 const Manager = require('../lib/Manager.js'); 
 
-test('checks to see if Manager inherited properties from Employee', ()=>{
+test('checks to see if Manager inherited properties from Employee and if officeNumber property was succesfully added', ()=>{
     const manager = new Manager('Joel',2,'joel@email.com', 821);
     
     expect(manager.name).toBe('Joel');
