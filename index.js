@@ -40,12 +40,12 @@ const engineerQuestionsArray=[
     },
     {
         type: 'input',
-        name: 'id',
+        name: 'engineerId',
         message: 'what is their ID'
     },
     {
         type: 'input',
-        name: 'email',
+        name: 'engineerEmail',
         message: 'what is their email'
     },
     {
@@ -61,6 +61,29 @@ const engineerQuestionsArray=[
     }
 
 ];
+
+const internQuestionsArray =[
+    {
+        type: 'input',
+        name: 'internName',
+        message: 'what is their name'
+    },
+    {
+        type: 'input',
+        name: 'internId',
+        message: 'what is their ID'
+    },
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'what is their email'
+    },
+    {
+        type: 'input',
+        name: 'school',
+        message: 'what school did they attend'
+    }
+]
 
 function engineerQuestions(){
     inquirer.prompt(engineerQuestionsArray)
