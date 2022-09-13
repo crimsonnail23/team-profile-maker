@@ -1,5 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Intern = require('./lib/Intern.js');
+const Manager = require('./lib/Manager.js');
+const Engineer = require('./lib/Engineer.js');
+const finalTeam = []
 
 //creats an array of questions that will be asked.
 const managerQuestionsArray = [
@@ -23,13 +27,6 @@ const managerQuestionsArray = [
         name: 'officeNumber',
         message: 'what is their office number'
     },
-    {
-        type: 'list',
-        name: 'addMore',
-        message: 'are you done building your team, or do you want to add more?',
-        choices: ['done', 'add engineer', 'intern'],
-        
-    }
 ];
 
 const engineerQuestionsArray=[
@@ -53,13 +50,6 @@ const engineerQuestionsArray=[
         name: 'username',
         message: 'what is their username',
     },
-    {
-        type: 'list',
-        name: 'addMore',
-        message: 'are you done building your team, or do you want to add more?',
-        choices: ['done', 'add engineer', 'intern']
-    }
-
 ];
 
 const internQuestionsArray =[
@@ -85,8 +75,43 @@ const internQuestionsArray =[
     }
 ]
 
+const promptMenu =()=>{
+    return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'menu',
+            message: 'do you want to add an engineer, an intern, or are you done building the team',
+            choices:['add an engineer', 'add an intern', 'finish building my team']
+        }
+    ]).then(userChoice=>{
+        switch (userChoice.menu) {
+            case 'add an engineer':
+                engineerQuestions();
+                break;
+            case 'add an intern':
+                internQuestions();
+                break;
+            case 'finish building my team':
+                break;
+
+        }
+    })
+}
+
 function engineerQuestions(){
     inquirer.prompt(engineerQuestionsArray)
+    .then((answers)=>{
+        console.log(answers)
+        promptMenu();
+    })
+}
+
+function internQuestions(){
+    inquirer.prompt(internQuestionsArray)
+        .then((answers)=>{
+            console.log(answers)
+            promptMenu();
+        })
 }
 
 //code that will start the prompts when called.
@@ -94,7 +119,9 @@ function start(){
     inquirer.prompt(managerQuestionsArray)
         .then((answers)=>{
             console.log(answers)
+            promptMenu();
         });
+
 };
 
 //starts the prompts.
