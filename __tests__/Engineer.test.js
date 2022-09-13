@@ -17,3 +17,8 @@ test('checks if getGithub method works',()=>{
     
     expect(engineer.getGithub()).toBe('mariaGithub');
 });
+text('checks if getRole method works.', ()=>{
+    const engineer= new Engineer('Maria',3,'maria@email.com','mariaGithub');
+
+    expect(engineer.getRole()).toBe('Engineer');
+});
