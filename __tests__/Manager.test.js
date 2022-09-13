@@ -28,9 +28,9 @@ test('checks to see if getEmail method works', ()=>{
 })
 
 test('checks to see if officeNumber method',()=>{
-    const manager = new Manager('Joel',2,'joel@email.com');
+    const manager = new Manager('Joel',2,'joel@email.com', 821);
 
-    expect(manager.officeNumber()).toEqual(expect.any(Number));
+    expect(manager.getOfficeNumber()).toEqual(821);
 })
 
 test('checks to see if getRole method works', ()=>{
