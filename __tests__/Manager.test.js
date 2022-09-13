@@ -25,3 +25,15 @@ test('checks to see if getEmail method works', ()=>{
 
     expect(manager.getEmail).toBe('joel@email.com');
 })
+
+test('checks to see if officeNumber method works',()=>{
+    const manager = new Manager('Joel',2,'joel@email.com');
+
+    expect(manager.officeNumber()).toEqual(expect.any(Number));
+})
+
+test('checks to see if getRole method works', ()=>{
+    const manager = new Manager('Joel',2,'joel@email.com');
+
+    expect(manager.getRole()).toBe('Manager');
+})
