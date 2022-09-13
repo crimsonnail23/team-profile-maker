@@ -1,4 +1,4 @@
-const Manager = require('../lib/Employee.js'); 
+const Manager = require('../lib/Manager.js'); 
 
 test('checks to see if Manager inherited properties from Employee', ()=>{
     const manager = new Manager('Joel',2,'joel@email.com');
