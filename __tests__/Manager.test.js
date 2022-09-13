@@ -11,7 +11,7 @@ test('checks to see if Manager inherited properties from Employee', ()=>{
 test('checks to see if getName method works',()=>{
     const manager = new Manager('Joel',2,'joel@email.com');
 
-    expect(manager.getName).toBe('Joel');
+    expect(manager.getName()).toBe('Joel');
 });
 
 test('checks to see if getId method works',()=>{
