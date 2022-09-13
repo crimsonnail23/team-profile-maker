@@ -7,3 +7,8 @@ test('checks to see if Engineer inherited properties from Employee',()=>{
     expect(engineer.id).toEqual(3);
     expect(engineer.email).toBe('maria@email.com');
 });
+test('checks if github property was succesfully added to Engineer',()=>{
+    const engineer = new Engineer('Maria', 3, 'maria@email.com', 'mariaGitHub');
+
+    expect(engineer.github).toBe('mariaGitHub');
+})
