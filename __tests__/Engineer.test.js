@@ -11,4 +11,9 @@ test('checks if github property was succesfully added to Engineer',()=>{
     const engineer = new Engineer('Maria', 3, 'maria@email.com', 'mariaGitHub');
 
     expect(engineer.github).toBe('mariaGitHub');
-})
+});
+test('checks if getGithub method works',()=>{
+    const engineer= new Engineer('Maria',3,'maria@email.com','mariaGithub');
+    
+    expect(engineer.getGithub()).toBe('mariaGithub');
+});
