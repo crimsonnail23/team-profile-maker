@@ -3,8 +3,8 @@ const fs = require('fs');
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
-const generateSite = require('./src/page-template.js');
-const finalTeam = []
+const generateSite = require('./src/generatePage.js');
+let finalTeam = []
 
 //creats an array of questions that will be asked.
 const managerQuestionsArray = [
@@ -121,7 +121,7 @@ function internQuestions(){
 }
 
 function makeTeam(finalTeam){
-    console.log('line 121 ',finalTeam)
+    console.log('line 124 ',finalTeam)
     fs.writeFile('./dist/index.html', generateSite(finalTeam))
 }
 
