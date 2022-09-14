@@ -1,7 +1,7 @@
 
 
-module.exports = generateSite =>{
-    const { } = generateSite;
+module.exports = (finalTeam)=>{
+    
     return `
     <!DOCTYPE html>
     <html lang="en">

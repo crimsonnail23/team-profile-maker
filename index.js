@@ -82,7 +82,7 @@ const promptMenu =()=>{
             type: 'list',
             name: 'menu',
             message: 'do you want to add an engineer, an intern, or are you done building the team',
-            choices:['add an engineer', 'add an intern', 'finish building my team']
+            choices:['add an engineer', 'add an intern', 'done making team']
         }
     ]).then(userChoice=>{
         switch (userChoice.menu) {
@@ -103,21 +103,25 @@ const promptMenu =()=>{
 function engineerQuestions(){
     inquirer.prompt(engineerQuestionsArray)
     .then((answers)=>{
-        console.log(answers)
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.username)
+        finalTeam.push(engineer);
+        console.log(finalTeam);
         promptMenu();
     })
 }
 
 function internQuestions(){
     inquirer.prompt(internQuestionsArray)
-        .then((answer)=>{
-            console.log(answer)
+        .then((answers)=>{
+            const intern = new Intern (answers.internName, answers.internId, answers.internEmail, answers.school);
+            finalTeam.push(intern);
+            console.log('line 115 ', finalTeam)
             promptMenu();
         })
 }
 
 function makeTeam(finalTeam){
-    console.log('stuff')
+    console.log('line 121 ',finalTeam)
     fs.writeFile('./dist/index.html', generateSite(finalTeam))
 }
 
@@ -128,7 +132,7 @@ function start(){
             //console.log(answers);
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
             finalTeam.push(manager);
-            console.log(finalTeam)
+            console.log('line 132 ', finalTeam)
             promptMenu();
         });
 
