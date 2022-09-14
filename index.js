@@ -3,6 +3,7 @@ const fs = require('fs');
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
+const generateSite = require('./src/page-template.js');
 const finalTeam = []
 
 //creats an array of questions that will be asked.
@@ -91,7 +92,8 @@ const promptMenu =()=>{
             case 'add an intern':
                 internQuestions();
                 break;
-            case 'finish building my team':
+            case 'done making team':
+                makeTeam();
                 break;
 
         }
@@ -108,17 +110,25 @@ function engineerQuestions(){
 
 function internQuestions(){
     inquirer.prompt(internQuestionsArray)
-        .then((answers)=>{
-            console.log(answers)
+        .then((answer)=>{
+            console.log(answer)
             promptMenu();
         })
+}
+
+function makeTeam(finalTeam){
+    console.log('stuff')
+    fs.writeFile('./dist/index.html', generateSite(finalTeam))
 }
 
 //code that will start the prompts when called.
 function start(){
     inquirer.prompt(managerQuestionsArray)
         .then((answers)=>{
-            console.log(answers)
+            //console.log(answers);
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+            finalTeam.push(manager);
+            console.log(finalTeam)
             promptMenu();
         });
 

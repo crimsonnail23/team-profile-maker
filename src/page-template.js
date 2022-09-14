@@ -1,5 +1,7 @@
-module.exports = templateData =>{
-    const { } = templateData;
+
+
+module.exports = generateSite =>{
+    const { } = generateSite;
     return `
     <!DOCTYPE html>
     <html lang="en">
