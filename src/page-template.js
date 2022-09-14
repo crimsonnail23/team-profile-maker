@@ -25,5 +25,11 @@ module.exports = templateData =>{
             <a class="engineer-email href="mailto: ${engineer.engineerName}"></a>
             <p class="github-username">www.github.com/${engineer.username}</p>
         </div>
+        <div class="intern-info">
+            <p class="intern-name>${intern.internName}</p>
+            <p class="intern-id">${intern.internId}</p>
+            <p class="intern-email">${intern.internEmail}</p>
+            <p class="intern-school">${intern.school}</p>
+        </div>
     `
 }
