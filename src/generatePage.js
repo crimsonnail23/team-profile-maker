@@ -35,7 +35,7 @@ module.exports = (teamData)=>{
             <p class="intern-name">${Intern.name}</p>
             <p class="intern-id">${Intern.id}</p>
             <p class="intern-email">${Intern.email}</p>
-            <p class="intern-school">${Intern.school}</p>
+            <p class="intern-school">school:${Intern.school}</p>
         </div>
     `
 }
