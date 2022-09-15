@@ -1,7 +1,9 @@
 
 
-module.exports = (finalTeam)=>{
-    
+module.exports = (teamData)=>{
+    console.log('ln 4' , teamData)
+    const [Manager,Intern,Engineer]=teamData
+    console.log(Manager);
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -22,7 +24,7 @@ module.exports = (finalTeam)=>{
             <p class="manager-id"></p>
         </div>
         <div class="engineer-info">
-            <p class="engineer-name">${engineer.engineerName}</p>
+            <p class="engineer-name">${engineer.name}</p> 
             <p class="engineer-id">${engineer.engineerId}</p>
             <a class="engineer-email href="mailto: ${engineer.engineerName}"></a>
             <p class="github-username">www.github.com/${engineer.username}</p>

@@ -33,7 +33,7 @@ const managerQuestionsArray = [
 const engineerQuestionsArray=[
     {
         type: 'input',
-        name: 'engineerName',
+        name: 'name',
         message: 'what is the name of the engineer'
     },
     {
@@ -103,7 +103,7 @@ const promptMenu =()=>{
 function engineerQuestions(){
     inquirer.prompt(engineerQuestionsArray)
     .then((answers)=>{
-        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.username)
+        const engineer = new Engineer(answers.name, answers.engineerId, answers.engineerEmail, answers.username)
         finalTeam.push(engineer);
         console.log(finalTeam);
         promptMenu();
@@ -120,9 +120,14 @@ function internQuestions(){
         })
 }
 
-function makeTeam(finalTeam){
+function makeTeam(){
     console.log('line 124 ',finalTeam)
-    fs.writeFile('./dist/index.html', generateSite(finalTeam))
+    fs.writeFile('./dist/index.html', generateSite(finalTeam), (err)=>{
+        if (err){
+            return console.log(err);
+        }
+        console.log('it worked.')
+    })
 }
 
 //code that will start the prompts when called.
