@@ -18,22 +18,22 @@ module.exports = (teamData)=>{
             <h1> My Team </h1>
         </header>
         <div class="manager-info">
-            <p class="manager-name">${manager.name}</p>
-            <p class="manager-id>${manager.id}</p>
-            <a href="mailto: ${manager.email}"> Send E-Mail</a>
+            <p class="manager-name">${Manager.name}</p>
+            <p class="manager-id>${Manager.id}</p>
+            <a href="mailto: ${Manager.email}"> Send E-Mail</a>
             <p class="manager-id"></p>
         </div>
         <div class="engineer-info">
-            <p class="engineer-name">${engineer.name}</p> 
-            <p class="engineer-id">${engineer.engineerId}</p>
-            <a class="engineer-email href="mailto: ${engineer.engineerName}"></a>
-            <p class="github-username">www.github.com/${engineer.username}</p>
+            <p class="engineer-name">${Engineer.name}</p> 
+            <p class="engineer-id">${Engineer.engineerId}</p>
+            <a class="engineer-email href="mailto: ${Engineer.engineerName}"></a>
+            <p class="github-username">www.github.com/${Engineer.username}</p>
         </div>
         <div class="intern-info">
-            <p class="intern-name>${intern.internName}</p>
-            <p class="intern-id">${intern.internId}</p>
-            <p class="intern-email">${intern.internEmail}</p>
-            <p class="intern-school">${intern.school}</p>
+            <p class="intern-name>${Intern.internName}</p>
+            <p class="intern-id">${Intern.internId}</p>
+            <p class="intern-email">${Intern.internEmail}</p>
+            <p class="intern-school">${Intern.school}</p>
         </div>
     `
 }
