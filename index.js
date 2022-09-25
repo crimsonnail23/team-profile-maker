@@ -95,18 +95,6 @@ const promptMenu =()=>{
             makeTeam();
         }
 
-        // switch (userChoice.menu) {
-        //     case 'add an engineer':
-        //         engineerQuestions();
-        //         break;
-        //     case 'add an intern':
-        //         internQuestions();
-        //         break;
-        //     case 'done making team':
-        //         makeTeam();
-        //         break;
-
-        // }
     })
 }
 
