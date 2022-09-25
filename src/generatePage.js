@@ -13,7 +13,7 @@ function createEngineer(engineer){
     <div class="engineer-info">
             <p class="engineer-name">name:${engineer.getName()}</p> 
             <p class="engineer-id">ID:${engineer.getId()}</p>
-            <a class="engineer-email" href="mailto: ${engineer.getEmail()}"></a>
+            <a class="engineer-email" href="mailto: ${engineer.getEmail()}">send email</a>
             <p class="github-username">www.github.com/${engineer.getGithub()}</p>
         </div>`
 }
@@ -21,9 +21,9 @@ function createEngineer(engineer){
 function createIntern(intern){
     return`
     <div class="intern-info">
-    <p class="intern-name">${intern.getName()}</p>
-    <p class="intern-id">${intern.getId()}</p>
-    <p class="intern-email">${intern.getEmail()}</p>
+    <p class="intern-name">Name: ${intern.getName()}</p>
+    <p class="intern-id">ID: ${intern.getId()}</p>
+    <p class="intern-email"href=mailto: ${intern.getEmail()}">send email</p>
     <p class="intern-school">school:${intern.getSchool()}</p>
 </div>`
 }
