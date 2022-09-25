@@ -82,21 +82,31 @@ const promptMenu =()=>{
             type: 'list',
             name: 'menu',
             message: 'do you want to add an engineer, an intern, or are you done building the team',
-            choices:['add an engineer', 'add an intern', 'done making team']
+            choices:[{name:'add an engineer', value:'engineer'}, {name:'add an intern', value: 'intern'}, {name: 'done making team', value: 'team'}]
         }
     ]).then(userChoice=>{
-        switch (userChoice.menu) {
-            case 'add an engineer':
-                engineerQuestions();
-                break;
-            case 'add an intern':
-                internQuestions();
-                break;
-            case 'done making team':
-                makeTeam();
-                break;
-
+        if(userChoice.menu==='engineer'){
+            engineerQuestions();
+        };
+        if(userChoice.menu==='intern'){
+            internQuestions();
+        };
+        if(userChoice.menu==='team'){
+            makeTeam();
         }
+
+        // switch (userChoice.menu) {
+        //     case 'add an engineer':
+        //         engineerQuestions();
+        //         break;
+        //     case 'add an intern':
+        //         internQuestions();
+        //         break;
+        //     case 'done making team':
+        //         makeTeam();
+        //         break;
+
+        // }
     })
 }
 
