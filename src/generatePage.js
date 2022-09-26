@@ -63,8 +63,9 @@ module.exports = (teamData)=>{
         <header>
             <h1> My Team </h1>
         </header>
+        <section class="employee">
         ${insertCards(teamData)}
-        
+        </section>
     </body>
     </html>
     `
