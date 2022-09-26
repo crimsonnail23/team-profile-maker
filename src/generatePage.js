@@ -18,7 +18,7 @@ function createEngineer(engineer){
             <a class="engineer-email" href="mailto: ${engineer.getEmail()}">send email</a>
             <br>
             <br>
-            <a href="www.github.com/${engineer.getGithub()}">GitHub Profile</a>
+            <a href="https://www.github.com/${engineer.getGithub()}">GitHub Profile</a>
         </div>`
 }
 
@@ -28,7 +28,7 @@ function createIntern(intern){
     <p>Intern</p>
     <p class="intern-name">Name: ${intern.getName()}</p>
     <p class="intern-id">ID: ${intern.getId()}</p>
-    <p class="intern-email"href=mailto: ${intern.getEmail()}">send email</p>
+    <p class="intern-email"href="mailto: ${intern.getEmail()}">send email</p>
     <p class="intern-school">school:${intern.getSchool()}</p>
 </div>`
 }
