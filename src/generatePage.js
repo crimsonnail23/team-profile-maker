@@ -28,7 +28,7 @@ function createIntern(intern){
     <p>Intern</p>
     <p class="intern-name">Name: ${intern.getName()}</p>
     <p class="intern-id">ID: ${intern.getId()}</p>
-    <p class="intern-email"href="mailto: ${intern.getEmail()}">send email</p>
+    <a class="intern-email"href="mailto: ${intern.getEmail()}">send email</a>
     <p class="intern-school">school:${intern.getSchool()}</p>
 </div>`
 }
