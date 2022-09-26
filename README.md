@@ -10,6 +10,12 @@ to showcase all the employees at the company. Just run the index.js in the comma
 
 https://crimsonnail23.github.io/team-profile-maker/
 
+# walkthrough
+
+Here is a link to the video walkthrough showcasing just how this site works.
+
+https://drive.google.com/file/d/14KXnMUoZ1XMc1SplmbVbbVFwMJcgnMCj/view 
+
 # references:
 I used a youtube video by Joelle DesChatelets as a reference, though I did refactor as much, if not all, of the code that I used.
 
