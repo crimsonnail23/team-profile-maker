@@ -1,0 +1,11 @@
+body{
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    background: linear-gradient(red, magenta)
+}
+
+div{
+    border: 10px solid white;
+    margin-bottom: 10px;
+    padding: 10px;
+}

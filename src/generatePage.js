@@ -1,6 +1,7 @@
 function createManager(manager){
     return `
     <div class="manager-info">
+    <p>Manager</p>
     <p class="manager-name">name: ${manager.getName()}</p>
     <p class="manager-id"> ID:${manager.getId()}</p>
     <a href='mailto: ${manager.getEmail()}'> Send E-Mail</a>
@@ -11,6 +12,7 @@ function createManager(manager){
 function createEngineer(engineer){
     return`
     <div class="engineer-info">
+            <p>Engineer</p>
             <p class="engineer-name">name:${engineer.getName()}</p> 
             <p class="engineer-id">ID:${engineer.getId()}</p>
             <a class="engineer-email" href="mailto: ${engineer.getEmail()}">send email</a>
@@ -21,6 +23,7 @@ function createEngineer(engineer){
 function createIntern(intern){
     return`
     <div class="intern-info">
+    <p>Intern</p>
     <p class="intern-name">Name: ${intern.getName()}</p>
     <p class="intern-id">ID: ${intern.getId()}</p>
     <p class="intern-email"href=mailto: ${intern.getEmail()}">send email</p>
