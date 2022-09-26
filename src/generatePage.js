@@ -16,7 +16,9 @@ function createEngineer(engineer){
             <p class="engineer-name">name:${engineer.getName()}</p> 
             <p class="engineer-id">ID:${engineer.getId()}</p>
             <a class="engineer-email" href="mailto: ${engineer.getEmail()}">send email</a>
-            <p class="github-username">www.github.com/${engineer.getGithub()}</p>
+            <br>
+            <br>
+            <a href="www.github.com/${engineer.getGithub()}">GitHub Profile</a>
         </div>`
 }
 
