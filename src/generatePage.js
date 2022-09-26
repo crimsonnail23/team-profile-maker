@@ -1,3 +1,6 @@
+// createManager function, createEngineer function, and createIntern function will be created if the user answers questions about them.
+// they pull information from the user inputs by using the methods defined in their class.
+
 function createManager(manager){
     return `
     <div class="manager-info">
@@ -33,6 +36,7 @@ function createIntern(intern){
 </div>`
 }
 
+//this will first filter the team by their role, and then loop through that role as many times as needed, and then add it to the HTML literal.
 function insertCards(team){
     const html = [];
     html.push(team.filter(employee =>employee.getRole()==='Manager').map(manager=>createManager(manager)));
@@ -42,6 +46,8 @@ function insertCards(team){
     return html.join('')
 }
 
+
+// following is an HTML literal that will have the basic HTML that will be used to generate the HTML file.
 module.exports = (teamData)=>{
     // console.log('ln 4' , teamData)
     // const [Manager,Intern,Engineer]=teamData

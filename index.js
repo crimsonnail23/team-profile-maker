@@ -6,7 +6,7 @@ const Engineer = require('./lib/Engineer.js');
 const generateSite = require('./src/generatePage.js');
 let finalTeam = []
 
-//creats an array of questions that will be asked.
+//creats an array of questions that will be initially asked, and will be passed through the start function.
 const managerQuestionsArray = [
     {
         type: 'input',
@@ -30,6 +30,7 @@ const managerQuestionsArray = [
     },
 ];
 
+//questions for engineers that will be passed through the engineerQuestions function.
 const engineerQuestionsArray=[
     {
         type: 'input',
@@ -52,7 +53,7 @@ const engineerQuestionsArray=[
         message: 'what is their username',
     },
 ];
-
+//questions for interns that will be passed through the internQuestions function.
 const internQuestionsArray =[
     {
         type: 'input',
